@@ -1,0 +1,15 @@
+{# empty Twig template #}
+
+{% import "form.macro.twig" as forms %}
+
+{% set item = get_context('item')%}
+
+{% set how_to_repeat_fields = get_context('how_to_repeat_fields')%}
+<div class="form-group how_to_repeat_fields">
+    <label for="repeated" class="col-sm-3 control-label">How to Repeat</label>
+    <div class="col-sm-9 kazicode-form-field">
+        {{ forms.input('how_to_repeat','select', item.how_to_repeat, null, null, null, null, null, how_to_repeat_fields) }}
+    </div>
+</div>
+
+

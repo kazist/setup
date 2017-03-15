@@ -1,0 +1,14 @@
+{# empty Twig template #}
+{% import "form.macro.twig" as forms %}
+
+{% set item = get_context('item')%}
+
+{% if item.forever %}
+    <div class="form-group end_date_fields">
+        <label for="repeated" class="col-sm-3 control-label">&nbsp;</label>
+        <div class="col-sm-9 kazicode-form-field">
+            <b>Set End Date</b>
+            {{ forms.input('end_date','text', item.end_date) }}
+        </div>
+    </div>
+{% endif %}

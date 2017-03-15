@@ -1,0 +1,123 @@
+{
+    "backend": [{
+            "title": "General Tasks",
+            "description": "General Tasks.",
+            "controller": "Setup\\Titles\\Code\\Controllers\\Admin\\TitlesController::taskAction",
+            "unique_name": "admin.setup.titles.task",
+            "route": "admin/setup/titles/task",
+            "permissions": "can_write",
+            "arguments": "",
+            "keywords": "titles, task",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_write"],
+                "ADMIN": ["can_write"]
+            }
+        }, {
+            "title": "Title List",
+            "description": "Management of Titles.",
+            "controller": "Setup\\Titles\\Code\\Controllers\\Admin\\TitlesController::indexAction",
+            "permissions": "can_view, can_viewown",
+            "unique_name": "admin.setup.titles",
+            "route": "admin/setup/titles",
+            "arguments": "",
+            "keywords": "title, list",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_view", "can_viewown"],
+                "ADMIN": ["can_view", "can_viewown"]
+            }
+        }, {
+            "title": "Add Title  ",
+            "description": "Add Title  .",
+            "controller": "Setup\\Titles\\Code\\Controllers\\Admin\\TitlesController::addAction",
+            "unique_name": "admin.setup.titles.add",
+            "route": "admin/setup/titles/add",
+            "permissions": "can_add",
+            "arguments": {},
+            "keywords": "title, add",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add"],
+                "ADMIN": ["can_add"]
+            }
+        }, {
+            "title": "Edit Title {{ item.name }}",
+            "description": "Edit Title {{ item.name }}.",
+            "controller": "Setup\\Titles\\Code\\Controllers\\Admin\\TitlesController::editAction",
+            "unique_name": "admin.setup.titles.edit",
+            "route": "admin/setup/titles/edit/{id}",
+            "permissions": "can_add, can_write, can_writeown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "title, list, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add", "can_write", "can_writeown"],
+                "ADMIN": ["can_add", "can_write", "can_writeown"]
+            }
+        }, {
+            "title": "Title Detail: {{ item.name }}",
+            "description": "Title Detail: {{ item.name }}",
+            "controller": "Setup\\Titles\\Code\\Controllers\\Admin\\TitlesController::detailAction",
+            "unique_name": "admin.setup.titles.detail",
+            "route": "admin/setup/titles/detail/{id}",
+            "permissions": "can_view, can_viewown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "title, list, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_view", "can_viewown"],
+                "ADMIN": ["can_view", "can_viewown"]
+            }
+        }, {
+            "title": "Title Delete: {{ item.name }}",
+            "description": "Title Delete: {{ item.name }}",
+            "controller": "Setup\\Titles\\Code\\Controllers\\Admin\\TitlesController::deleteAction",
+            "unique_name": "admin.setup.titles.delete",
+            "route": "admin/setup/titles/delete/{id}",
+            "permissions": "can_delete, can_deleteown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "title, delete, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_delete", "can_deleteown"],
+                "ADMIN": ["can_delete", "can_deleteown"]
+            }
+        }, {
+            "title": "Title Save: {{ item.name }}",
+            "description": "Title Save: {{ item.name }}",
+            "controller": "Setup\\Titles\\Code\\Controllers\\Admin\\TitlesController::saveAction",
+            "unique_name": "admin.setup.titles.save",
+            "route": "admin/setup/titles/save",
+            "permissions": "can_add, can_write, can_writeown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "title, save, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add", "can_write", "can_writeown"],
+                "ADMIN": ["can_add", "can_write", "can_writeown"]
+            }
+        }]
+} 	

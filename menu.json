@@ -1,0 +1,49 @@
+{
+    "title": "Setup",
+    "description": "Setup Advertisement",
+    "alias": "setup",
+    "icon": "fa-picture-o",
+    "home_link": "setup\/countries",
+    "is_core": "1",
+    "menulist": [{
+            "title": "Countries",
+            "alias": "admin_setup_countries",
+            "url": "admin/setup/countries",
+            "children": []
+        }, {
+            "title": "Calendar",
+            "alias": "admin_setup_calendar",
+            "url": "admin/setup/calendar",
+            "children": []
+        }, {
+            "title": "Currencies",
+            "alias": "admin_setup_currencies",
+            "url": "admin/setup/currencies",
+            "children": []
+        }, {
+            "title": "Languages",
+            "alias": "admin_setup_languages",
+            "url": "admin/setup/languages",
+            "children": []
+        }, {
+            "title": "Metros",
+            "alias": "admin_setup_metros",
+            "url": "admin/setup/metros",
+            "children": []
+        }, {
+            "title": "Regions",
+            "alias": "admin_setup_regions",
+            "url": "admin/setup/regions",
+            "children": []
+        }, {
+            "title": "Relationships",
+            "alias": "admin_setup_relationships",
+            "url": "admin/setup/relationships",
+            "children": []
+        }, {
+            "title": "Timezones",
+            "alias": "admin_setup_timezones",
+            "url": "admin/setup/timezones",
+            "children": []
+        }]
+}

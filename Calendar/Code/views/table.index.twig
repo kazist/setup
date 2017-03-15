@@ -1,0 +1,11 @@
+{# empty Twig template #}
+{{ set_assets('applications/Setup/assets/js/calendar.js') }}
+
+
+<div class="col-md-12">
+    <div id="todolist_calendar"></div>
+</div>
+<form id="{{ main_form_id }}" action="{{ generate_url(''~ kazi_url.app_name ~'.'~ kazi_url.com_name) }}" method="post" >
+    {% include "form.hidden.twig" %}
+    {{ forms.input('_token' ) }} 
+</form>

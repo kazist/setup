@@ -1,0 +1,57 @@
+Setup\Regions\Code\Tables\Regions:
+  table: setup_regions
+  type: entity
+  id:
+    id:
+      type: integer
+      generator: { strategy: AUTO }
+  fields:
+    name:
+      name: name
+      type: text
+      nullable: false
+    country:
+      name: country
+      type: string
+      length: 255
+      nullable: true
+    fips:
+      name: fips
+      type: string
+      length: 255
+      nullable: true
+    iso:
+      name: iso
+      type: string
+      length: 255
+      nullable: true
+    timezone_id:
+      name: timezone_id
+      type: string
+      length: 255
+      nullable: true
+    created_by:
+      name: created_by
+      type: integer
+      length: 11
+      nullable: false
+    date_created:
+      name: date_created
+      type: datetime
+      nullable: false
+    modified_by:
+      name: modified_by
+      type: integer
+      length: 11
+      nullable: false
+    date_modified:
+      name: date_modified
+      type: datetime
+      nullable: false
+  lifecycleCallbacks:
+    prePersist:
+      - onPrePersist
+      - onPrePersistCallbacks
+    preUpdate:
+      - onPreUpdate
+      - onPreUpdateCallbacks

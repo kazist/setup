@@ -1,0 +1,13 @@
+{# empty Twig template #}
+
+{% import "form.macro.twig" as forms %}
+
+{% set item = get_context('item')%}
+
+{% set repeated_every = get_context('repeated_every')%}
+<div class="form-group repeated_every-group">
+    <label for="repeated_every" class="col-sm-3 control-label">Repeated Every</label>
+    <div class="col-sm-9 kazicode-form-field">
+        {{ forms.input('repeated_every','select', item.repeated_every, null, null, null, null, null, repeated_every) }}
+    </div>
+</div>

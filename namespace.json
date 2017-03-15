@@ -1,0 +1,38 @@
+{
+    "SetupCalendar": {
+        "namespace": "Setup\\Calendar",
+        "controller": "CalendarController"
+    },
+    "SetupTitles": {
+        "namespace": "Setup\\Titles",
+        "controller": "TitlesController"
+    },
+    "SetupRelationships": {
+        "namespace": "Setup\\Relationships",
+        "controller": "RelationshipsController"
+    },
+    "SetupCountries": {
+        "namespace": "Setup\\Countries",
+        "controller": "CountriesController"
+    },
+    "SetupCurrencies": {
+        "namespace": "Setup\\Currencies",
+        "controller": "CurrenciesController"
+    },
+    "SetupLanguages": {
+        "namespace": "Setup\\Languages",
+        "controller": "LanguagesController"
+    },
+    "SetupMetros": {
+        "namespace": "Setup\\Metros",
+        "controller": "MetrosController"
+    },
+    "SetupRegions": {
+        "namespace": "Setup\\Regions",
+        "controller": "RegionsController"
+    },
+    "SetupTimezones": {
+        "namespace": "Setup\\Timezones",
+        "controller": "TimezonesController"
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "name": "setup",
+    "title": "General Setup",
+    "icon": "icons\/setup.png",
+    "extension": "component",
+    "path": "setup\/",
+    "description": "General Setup",
+    "version": 1
+}
