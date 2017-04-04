@@ -1,9 +1,9 @@
 {
-    "name": "setup",
+    "name": "kazist/setup",
     "title": "General Setup",
     "icon": "icons\/setup.png",
     "extension": "component",
-    "path": "setup\/",
+    "path": "applications/Setup/",
     "description": "General Setup",
     "version": 1
 }
