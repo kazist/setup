@@ -151,19 +151,19 @@
             "name": "how_to_repeat",
             "title": "How To Repeat",
             "type": "file",
-            "description": "undefined"
+            "description": ""
         },
         {
             "name": "explanation",
             "title": "Explanation",
             "type": "file",
-            "description": "undefined"
+            "description": ""
         },
         {
             "name": "summary",
             "title": "Summary",
             "type": "file",
-            "description": "undefined"
+            "description": ""
         }
     ],
     "fields": [
