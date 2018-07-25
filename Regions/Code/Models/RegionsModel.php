@@ -11,7 +11,6 @@ namespace Setup\Regions\Code\Models;
 defined('KAZIST') or exit('Not Kazist Framework');
 
 use Kazist\Model\BaseModel;
-use Kazist\KazistFactory;
 use Kazist\Service\Database\Query;
 
 /**
@@ -19,13 +18,15 @@ use Kazist\Service\Database\Query;
  *
  * @author sbc
  */
-class RegionsModel extends BaseModel {
+class RegionsModel extends BaseModel
+{
 
     public $limit = 10;
 
-    // xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx Regions 
+    // xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx Regions
 
-    public function getRegions($country_code) {
+    public function getRegions($country_code)
+    {
 
         $query = new Query();
         $query->select('sr.*');
@@ -44,7 +45,8 @@ class RegionsModel extends BaseModel {
         return $records;
     }
 
-    public function getRegionsInput($country_id) {
+    public function getRegionsInput($country_id)
+    {
 
         $tmp_array = array();
 
@@ -59,7 +61,8 @@ class RegionsModel extends BaseModel {
         return $tmp_array;
     }
 
-    public function loadRegionOption($country_code, $location_id) {
+    public function loadRegionOption($country_code, $location_id = '')
+    {
 
         $tmp_array = array();
 
