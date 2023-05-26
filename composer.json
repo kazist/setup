@@ -12,5 +12,10 @@
             "homepage": "http://emshyinnovate.com",
             "role": "Founder & Developer"
         }
-    ]
+    ],
+    "scripts": {
+        "pre-install-cmd": [
+            "composer create-project laravel/laravel:^9.0 mybizna"
+        ]
+    }
 }
