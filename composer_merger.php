@@ -11,7 +11,7 @@ $mybiznaData = json_decode($mybiznaComposer, true);
 $rootData = json_decode($rootComposer, true);
 
 $merge_keys = ["require", "require-dev", "autoload", "autoload-dev", "scripts",
-"extra","config","minimum-stability", "prefer-stable"];
+"extra","config"];
 
 foreach ($merge_keys as $key => $merge_key) {
     // Merge the "item" sections
