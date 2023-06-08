@@ -25,7 +25,7 @@
             "composer create-project laravel/laravel:^9.0 mybizna",
             "php composer_merger.php",
             "rm mybizna/composer.json && rm mybizna/composer.lock  && rm composer.lock",
-            "cp -R mybizna/. .",
+            "mv -R mybizna/. .",
             "chmod +x mybizna_install.sh && ./mybizna_install.sh"
         ]
     },
