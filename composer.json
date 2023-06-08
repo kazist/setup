@@ -19,7 +19,7 @@
         ],
         "post-create-project-cmd": [
             "composer create-project laravel/laravel:^9.0 mybizna",
-            "php merge-composer.php",
+            "php composer_merger.php",
             "rm mybizna/composer.json && rm mybizna/composer-lock.json  && rm composer-lock.json",
             "cp -R mybizna/. ."
         ]
