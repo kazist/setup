@@ -10,14 +10,14 @@ $rootComposer = file_get_contents('composer.json');
 $mybiznaData = json_decode($mybiznaComposer, true);
 $rootData = json_decode($rootComposer, true);
 
-// Merge the "require" sections
-if (isset($mybiznaData['require'])) {
-    $rootData['require'] = array_merge($rootData['require'], $mybiznaData['require']);
-}
+$merge_keys = ["require", "require-dev", "autoload", "autoload-dev", "scripts",
+"extra","config","minimum-stability", "prefer-stable"];
 
-// Merge the "require-dev" sections
-if (isset($mybiznaData['require-dev'])) {
-    $rootData['require-dev'] = array_merge($rootData['require-dev'], $mybiznaData['require-dev']);
+foreach ($merge_keys as $key => $merge_key) {
+    // Merge the "item" sections
+    if (isset($mybiznaData[$merge_key])) {
+        $rootData[$merge_key] = array_merge($rootData[$merge_key], $mybiznaData[$merge_key]);
+    }
 }
 
 // Encode the merged data back to JSON

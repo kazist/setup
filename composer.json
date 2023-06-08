@@ -4,7 +4,7 @@
     "keywords": ["kazist", "setup manager"],
     "homepage": "https://github.com/kazist/setup",
     "license": "LGPL-3.0-or-later",
-     "version": "1.0.21",
+     "version": "1.0.22",
     "authors": [
         {
             "name": "Dedan Irungu",
@@ -13,6 +13,10 @@
             "role": "Founder & Developer"
         }
     ],
+    "require": {},
+    "require-dev": {},
+    "autoload": {},
+    "autoload-dev": {},
     "scripts": {
         "pre-install-cmd": [
             "echo 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'"
@@ -23,5 +27,9 @@
             "rm mybizna/composer.json && rm mybizna/composer-lock.json  && rm composer-lock.json",
             "cp -R mybizna/. ."
         ]
-    }
+    },
+    "extra": {},   
+    "config": {},
+    "minimum-stability": {},
+    "prefer-stable": {}
 }
