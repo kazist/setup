@@ -1,25 +1,4 @@
 #!/bin/bash
-# chmod +x mybizna_install.sh && ./mybizna_install.sh . testlaravel
-
-
-# Function to validate folder path
-validate_folder_path() {
-    local folder_path=$1
-
-    # Check if folder path is provided
-    if [[ -z "$folder_path" ]]; then
-        echo "Error: Folder path cannot be empty."
-        return 1
-    fi
-
-    # Check if folder path exists
-    if [[ ! -d "$folder_path" ]]; then
-        echo "Error: Folder path '$folder_path' does not exist."
-        return 1
-    fi
-
-    return 0
-}
 
 # Function to validate script name
 validate_string() {
@@ -34,27 +13,6 @@ validate_string() {
 
     return 0
 }
-
-# Check if folder path and script name are provided as parameters
-if [[ $# -ne 2 ]]; then
-    echo "Usage: $0 <folder_path> <project_name>"
-    exit 1
-fi
-
-# Extract folder path and script name from the parameters
-folder_path=$1
-project_name=$2
-
-# Validate folder path
-if ! validate_folder_path "$folder_path"; then
-    exit 1
-fi
-
-# Validate script name
-if ! validate_string "$project_name"; then
-    echo "Error: Project name cannot be empty."
-    exit 1
-fi
 
 # Prompt for Mysql Host
 read -p "Enter Mysql Host (default is localhost): " -e db_host
@@ -71,7 +29,6 @@ if ! validate_string "$db_port"; then
     echo "Error: Mysql Port cannot be empty."
     exit 1
 fi
-
 
 # Prompt for Mysql Username
 read -p "Enter Mysql Username: " db_username
@@ -124,13 +81,6 @@ else
     fi
 fi
 
-# Construct the full path for script installation
-install_path="$folder_path/$project_name"
-
-composer create-project laravel/laravel:^9.0 $install_path
-
-# Copy the script to the installation path
-cd $install_path
 
 #xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 #xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -278,4 +228,4 @@ php artisan mybizna:dataprocessor
 
 php artisan key:generate
 
-echo "Script installed successfully at $install_path."
+echo "Script installed successfully."
