@@ -15,7 +15,9 @@
     ],
     "scripts": {
         "pre-install-cmd": [
-            "echo 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'",
+            "echo 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'"
+        ],
+        "post-create-project-cmd": [
             "composer create-project laravel/laravel:^9.0 mybizna"
         ]
     }
